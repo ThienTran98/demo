@@ -37,18 +37,18 @@
     ├── lib/              # Common library and utility functions
     ├── pages/            # Components serving as entry points for pages
     ├── routes/           # Defining the routes of the application
-    │   ├── AppRouter.tsx       # Component containing all the Routes of the application
-    │   └── index.ts             # File containing the Route configurations
+    │   ├── AppRouter.jsx       # Component containing all the Routes of the application
+    │   └── index.jsx             # File containing the Route configurations
     ├── services/         # Logic for data handling and server interaction
     ├── states/           # State management and Redux actions
     ├── styles/           # CSS or CSS-in-JS styles
     ├── tests/            # Unit tests and other types of tests for your code
     ├── types/            # General TypeScript types, enums, and interfaces
     ├── api/              # Logic for server communication
-    │   └── apiClient.ts       # Client for sending HTTP requests to the API
+    │   └── apiClient.jsx       # Client for sending HTTP requests to the API
     ├── configs/          # Configuration for the application
-    │   ├── env.ts              # File containing environment variables
-    │   └── axiosConfig.ts      # Configuring axios for API communication
+    │   ├── .env              # File containing environment variables
+    │   └── axiosConfig.jsx      # Configuring axios for API communication
     ├── constants/        # Constants with unchanged values
     └── utils/            # Common utilities and helper functions
 ```
@@ -94,8 +94,8 @@
     ├── lib/              # Thư viện và tiện ích hỗ trợ chung
     ├── pages/            # Các component là điểm vào cho các trang
     ├── routes/           # Định nghĩa các đường dẫn của ứng dụng
-    │   ├── AppRouter.tsx       # Component chứa tất cả các Route của ứng dụng
-    │   └── index.ts             # File chứa các cấu hình Route
+    │   ├── AppRouter.jsx       # Component chứa tất cả các Route của ứng dụng
+    │   └── index.jsx             # File chứa các cấu hình Route
     ├── services/         # Logic xử lý dữ liệu và tương tác với server
     ├── states/           # Quản lý trạng thái và hành động Redux
     ├── styles/           # CSS hoặc CSS-in-JS styles
