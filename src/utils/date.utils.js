@@ -1,0 +1,1 @@
+export const convertDateToDDMMYYYY = (date) => `DD-MM-YYY ${date}`;

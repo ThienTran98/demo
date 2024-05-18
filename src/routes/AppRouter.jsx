@@ -1,24 +1,16 @@
 import { Navigate, useRoutes } from "react-router-dom";
-import { AccessDeniedPage } from "../components/Errors/AccessDeniedPage";
-import { InvalidDataErrorPage } from "../components/Errors/InvalidDataErrorPage";
-import { NetworkErrorPage } from "../components/Errors/NetworkErrorPage";
-import { NotFoundPage } from "../components/Errors/NotFoundPage";
-import { ServerErrorPage } from "../components/Errors/ServerErrorPage";
-import { SoftwareErrorPage } from "../components/Errors/SoftwareErrorPage";
-import {
-  ERR_403_ROUTE,
-  ERR_404_ROUTE,
-  ERR_500_ROUTE,
-  ERR_INVALID_DATA_ROUTE,
-  ERR_NETWORK_ROUTE,
-  ERR_SOFTWARE_ROUTE,
-  HOME_ROUTE,
-} from "../constants/routes";
+import { AccessDeniedPage } from "../global-components/errors/AccessDeniedPage";
+import { InvalidDataErrorPage } from "../global-components/errors/InvalidDataErrorPage";
+import { NetworkErrorPage } from "../global-components/errors/NetworkErrorPage";
+import { NotFoundPage } from "../global-components/errors/NotFoundPage";
+import { ServerErrorPage } from "../global-components/errors/ServerErrorPage";
+import { SoftwareErrorPage } from "../global-components/errors/SoftwareErrorPage";
+import RoutePath from "./RoutePath";
 
 const AppRouter = () => {
   return useRoutes([
     {
-      path: HOME_ROUTE,
+      path: RoutePath.HOME_ROUTE,
       element: <Navigate to="/hello-word" />,
     },
     {
@@ -30,27 +22,27 @@ const AppRouter = () => {
       ),
     },
     {
-      path: ERR_403_ROUTE,
+      path: RoutePath.ERR_403_ROUTE,
       element: <AccessDeniedPage />,
     },
     {
-      path: ERR_404_ROUTE,
+      path: RoutePath.ERR_404_ROUTE,
       element: <NotFoundPage />,
     },
     {
-      path: ERR_500_ROUTE,
+      path: RoutePath.ERR_500_ROUTE,
       element: <ServerErrorPage />,
     },
     {
-      path: ERR_NETWORK_ROUTE,
+      path: RoutePath.ERR_NETWORK_ROUTE,
       element: <NetworkErrorPage />,
     },
     {
-      path: ERR_INVALID_DATA_ROUTE,
+      path: RoutePath.ERR_INVALID_DATA_ROUTE,
       element: <InvalidDataErrorPage />,
     },
     {
-      path: ERR_SOFTWARE_ROUTE,
+      path: RoutePath.ERR_SOFTWARE_ROUTE,
       element: <SoftwareErrorPage />,
     },
   ]);
