@@ -1,111 +1,251 @@
-## Directory structure
-```plaintext
-├── public/
-│   ├── index.html        # Main HTML file of the React application
-│   └── favicon.ico       # Website favicon
-└── src/
-    ├── assets/           # Resources like images, videos, and other asset files
-    │   ├── images/       # Directory containing images
-    │   │   ├── logo.png      # Application logo
-    │   │   └── background.jpg    # Background image for the website
-    │   ├── videos/       # Directory containing videos
-    │   │   └── intro.mp4         # Introduction video for the application
-    │   └── others/       # Other resources like fonts, icons, etc.
-    │       └── font.ttf          # Custom font file
-    ├── modules/          # Main modules of the application
-    │   ├── auth/         # Module handling login and registration
-    │   │   ├── components/    # UI components related to login and registration
-    │   │   ├── hooks/         # Custom hooks related to login and registration
-    │   │   ├── lib/           # Library and utility functions for this module
-    │   │   ├── services/      # Logic for data handling and server interaction
-    │   │   ├── states/        # State management and actions related to login and registration
-    │   │   │   ├── actions/       # Redux actions
-    │   │   │   ├── reducers/      # Redux reducers
-    │   │   │   ├── selectors/     # Selectors to extract data from the store
-    │   │   │   └── store/         # Initializing and configuring the Redux store
-    │   │   └── utils/         # Utilities and helper functions for this module
-    │   └── core/         # Module containing common components and logic for the entire application
-    │       ├── components/    # Common UI components like header, footer, etc.
-    │       ├── design-system/ # Directory containing components of the design system
-    │       ├── hooks/         # Common custom hooks for the entire application
-    │       ├── lib/           # Common library and utility functions
-    │       └── utils/         # Common utilities and helper functions
-    ├── components/       # UI components not belonging to any specific module
-    ├── contexts/         # React Contexts and Providers
-    ├── hooks/            # Common custom React hooks
-    ├── icons/            # SVG icons for inline usage
-    ├── lib/              # Common library and utility functions
-    ├── pages/            # Components serving as entry points for pages
-    ├── routes/           # Defining the routes of the application
-    │   ├── AppRouter.jsx       # Component containing all the Routes of the application
-    │   └── index.jsx             # File containing the Route configurations
-    ├── services/         # Logic for data handling and server interaction
-    ├── states/           # State management and Redux actions
-    ├── styles/           # CSS or CSS-in-JS styles
-    ├── tests/            # Unit tests and other types of tests for your code
-    ├── types/            # General TypeScript types, enums, and interfaces
-    ├── api/              # Logic for server communication
-    │   └── apiClient.jsx       # Client for sending HTTP requests to the API
-    ├── configs/          # Configuration for the application
-    │   ├── .env              # File containing environment variables
-    │   └── axiosConfig.jsx      # Configuring axios for API communication
-    ├── constants/        # Constants with unchanged values
-    └── utils/            # Common utilities and helper functions
-```
+# React Application Project Structure
+
+This document provides an overview of the folder structure used in this React application. Each folder and file is explained to help you understand the organization and purpose of the components within the project.
+
+## 📂 src
+
+The root folder of the source code, containing all the main folders and files of the project.
+
+### 📂 api
+
+This folder contains files related to API calls and client setup.
+
+- **apiClient.js**: Configures the API client, such as Axios, with base settings.
+- **Readme.md**: Documentation for API-related configurations and usage.
+
+### 📂 assets
+
+This folder holds static assets like images, videos, and other media files.
+
+- **images/**: Contains image files. The `.gitkeep` file ensures the directory is included in the version control.
+- **others/**: For other types of media or files.
+- **videos/**: Contains video files.
+- **react.svg**: Example image file.
+- **Readme.md**: Documentation for asset management and usage guidelines.
+
+### 📂 components
+
+This folder contains reusable React components organized by feature or type.
+
+- **Errors/**: Contains error page components.
+  - **AccessDeniedPage.jsx**: Component for access denied error.
+  - **InvalidDataErrorPage.jsx**: Component for invalid data error.
+  - **NetworkErrorPage.jsx**: Component for network error.
+  - **NotFoundPage.jsx**: Component for 404 not found error.
+  - **ServerErrorPage.jsx**: Component for server error.
+  - **SoftwareErrorPage.jsx**: Component for software error.
+- **Readme.md**: Documentation for components, guidelines for creating and organizing them.
+
+### 📂 configs
+
+Configuration files for different environments and settings.
+
+- **.env.development**: Environment variables for development.
+- **.env.production**: Environment variables for production.
+- **axiosConfig.js**: Axios configuration file.
+
+### 📂 constants
+
+Contains constant values used throughout the application.
+
+- **actionTypes.jsx**: Defines action types for Redux or other state management libraries.
+- **api.jsx**: API endpoints and related constants.
+- **colors.jsx**: Color constants for styling.
+- **messages.jsx**: User-facing messages and text constants.
+- **routes.jsx**: Route paths and related constants.
+
+### 📂 hooks
+
+Custom React hooks for managing state and side effects.
+
+- **.gitkeep**: Ensures the directory is included in the version control.
+
+### 📂 modules
+
+Feature-based modules, each containing its own components, hooks, states, and utilities.
+
+- **auth/**: Authentication module.
+  - **components/**: Components related to authentication.
+  - **hooks/**: Custom hooks for authentication logic.
+  - **states/**: State management for authentication.
+    - **actions/**: Redux or other state management actions.
+    - **reducers/**: Reducers for authentication state.
+    - **store/**: Store configuration for authentication state.
+  - **utils/**: Utility functions specific to authentication.
+- **core/**: Core functionality shared across modules.
+  - **components/**: Core shared components.
+  - **design-system/**: Design system components and styles.
+  - **hooks/**: Custom hooks for core functionality.
+  - **utils/**: Utility functions for core functionality.
+
+### 📂 pages
+
+Contains page-level components, each representing a full page in the application.
+
+- **.gitkeep**: Ensures the directory is included in the version control.
+
+### 📂 routes
+
+Routing configuration and components.
+
+- **AppRouter.jsx**: Main routing component.
+- **index.js**: Entry point for route configuration.
+
+### 📂 styles
+
+Global styles and style-related files.
+
+- **.gitkeep**: Ensures the directory is included in the version control.
+
+### 📂 tests
+
+Test files and test utilities.
+
+- **.gitkeep**: Ensures the directory is included in the version control.
+
+### 📂 utils
+
+Utility functions and helpers used throughout the application.
+
+- **.gitkeep**: Ensures the directory is included in the version control.
+
+### Root Files
+
+- **App.css**: Global CSS styles for the application.
+- **App.jsx**: Root component of the application.
+- **index.css**: Base CSS styles.
+- **main.jsx**: Entry point for the React application, renders the root component.
+
+## Additional Notes
+
+- **.gitkeep** files are used to include otherwise empty directories in version control.
+- **Readme.md** files within folders provide specific documentation and guidelines related to that folder.
+
+This structure helps in maintaining a clean, organized, and scalable codebase for your React application. Each module and component is self-contained, making it easier to manage and develop new features.
 
 
-## Cấu Trúc Thư Mục
+---
+# Cấu Trúc Dự Án Ứng Dụng React
 
-```plaintext
-├── public/
-│   ├── index.html        # Tệp HTML chính của ứng dụng React
-│   └── favicon.ico       # Biểu tượng trang web
-└── src/
-    ├── assets/           # Tài nguyên như hình ảnh, video, và các tệp tài nguyên khác
-    │   ├── images/       # Thư mục chứa hình ảnh
-    │   │   ├── logo.png      # Logo của ứng dụng
-    │   │   └── background.jpg    # Hình nền cho trang web
-    │   ├── videos/       # Thư mục chứa video
-    │   │   └── intro.mp4         # Video giới thiệu ứng dụng
-    │   └── others/       # Các tài nguyên khác như font, biểu tượng, vv.
-    │       └── font.ttf          # Font chữ tùy chỉnh
-    ├── modules/          # Các module chính của ứng dụng
-    │   ├── auth/         # Module quản lý đăng nhập và đăng ký
-    │   │   ├── components/    # Các thành phần UI liên quan đến đăng nhập và đăng ký
-    │   │   ├── hooks/         # Các hooks custom liên quan đến đăng nhập và đăng ký
-    │   │   ├── lib/           # Thư viện và tiện ích hỗ trợ cho module này
-    │   │   ├── services/      # Logic xử lý dữ liệu và tương tác với server
-    │   │   ├── states/        # Quản lý trạng thái và hành động liên quan đến đăng nhập và đăng ký
-    │   │   │   ├── actions/       # Các hành động Redux
-    │   │   │   ├── reducers/      # Reducers Redux
-    │   │   │   ├── selectors/     # Các selector để trích xuất dữ liệu từ store
-    │   │   │   └── store/         # Khởi tạo và cấu hình Redux store
-    │   │   └── utils/         # Các tiện ích và hàm phụ trợ cho module này
-    │   └── core/         # Module chứa các thành phần và logic chung cho toàn bộ ứng dụng
-    │       ├── components/    # Các thành phần UI chung như header, footer, vv.
-    │       ├── design-system/ # Thư mục chứa các thành phần của hệ thống thiết kế
-    │       ├── hooks/         # Các hooks custom chung cho toàn bộ ứng dụng
-    │       ├── lib/           # Thư viện và tiện ích hỗ trợ chung
-    │       └── utils/         # Các tiện ích và hàm phụ trợ chung
-    ├── components/       # Các thành phần UI không thuộc bất kỳ module cụ thể nào
-    ├── contexts/         # Các Contexts và Providers của React
-    ├── hooks/            # Các custom React hooks chung
-    ├── icons/            # Biểu tượng SVG để sử dụng inline
-    ├── lib/              # Thư viện và tiện ích hỗ trợ chung
-    ├── pages/            # Các component là điểm vào cho các trang
-    ├── routes/           # Định nghĩa các đường dẫn của ứng dụng
-    │   ├── AppRouter.jsx       # Component chứa tất cả các Route của ứng dụng
-    │   └── index.jsx             # File chứa các cấu hình Route
-    ├── services/         # Logic xử lý dữ liệu và tương tác với server
-    ├── states/           # Quản lý trạng thái và hành động Redux
-    ├── styles/           # CSS hoặc CSS-in-JS styles
-    ├── tests/            # Các unit test và các loại test khác cho mã của bạn
-    ├── types/            # Các loại TypeScript chung, enums và giao diện
-    ├── api/              # Logic liên lạc với máy chủ
-    │   └── apiClient.jsx       # Client để gửi yêu cầu HTTP đến API
-    ├── configs/          # Cấu hình cho ứng dụng
-    │   ├── .env              # File chứa các biến môi trường
-    │   └── axiosConfig.jsx      # Cấu hình axios cho giao tiếp với API
-    └── constants/        # Các hằng số không thay đổi
-    └── utils/            # Các tiện ích và hàm phụ trợ chung
-```
+Tài liệu này cung cấp tổng quan về cấu trúc thư mục được sử dụng trong ứng dụng React này. Mỗi thư mục và tệp tin được giải thích để giúp bạn hiểu cách tổ chức và mục đích của các thành phần trong dự án.
+
+## 📂 src
+
+Thư mục gốc của mã nguồn, chứa tất cả các thư mục và tệp tin chính của dự án.
+
+### 📂 api
+
+Thư mục này chứa các tệp liên quan đến các cuộc gọi API và thiết lập client.
+
+- **apiClient.js**: Cấu hình client API, chẳng hạn như Axios, với các cài đặt cơ bản.
+- **Readme.md**: Tài liệu cho các cấu hình và sử dụng liên quan đến API.
+
+### 📂 assets
+
+Thư mục này lưu trữ các tài sản tĩnh như hình ảnh, video và các tệp media khác.
+
+- **images/**: Chứa các tệp hình ảnh. Tệp `.gitkeep` đảm bảo thư mục được bao gồm trong kiểm soát phiên bản.
+- **others/**: Chứa các loại media hoặc tệp khác.
+- **videos/**: Chứa các tệp video.
+- **react.svg**: Tệp hình ảnh ví dụ.
+- **Readme.md**: Tài liệu về quản lý tài sản và hướng dẫn sử dụng.
+
+### 📂 components
+
+Thư mục này chứa các thành phần React có thể tái sử dụng, được tổ chức theo tính năng hoặc loại.
+
+- **Errors/**: Chứa các thành phần trang lỗi.
+  - **AccessDeniedPage.jsx**: Thành phần cho lỗi truy cập bị từ chối.
+  - **InvalidDataErrorPage.jsx**: Thành phần cho lỗi dữ liệu không hợp lệ.
+  - **NetworkErrorPage.jsx**: Thành phần cho lỗi mạng.
+  - **NotFoundPage.jsx**: Thành phần cho lỗi 404 không tìm thấy.
+  - **ServerErrorPage.jsx**: Thành phần cho lỗi máy chủ.
+  - **SoftwareErrorPage.jsx**: Thành phần cho lỗi phần mềm.
+- **Readme.md**: Tài liệu cho các thành phần, hướng dẫn tạo và tổ chức chúng.
+
+### 📂 configs
+
+Các tệp cấu hình cho các môi trường và cài đặt khác nhau.
+
+- **.env.development**: Các biến môi trường cho môi trường phát triển.
+- **.env.production**: Các biến môi trường cho môi trường sản xuất.
+- **axiosConfig.js**: Tệp cấu hình cho Axios.
+
+### 📂 constants
+
+Chứa các giá trị hằng số được sử dụng trong toàn bộ ứng dụng.
+
+- **actionTypes.jsx**: Định nghĩa các loại hành động cho Redux hoặc các thư viện quản lý trạng thái khác.
+- **api.jsx**: Các điểm cuối API và các hằng số liên quan.
+- **colors.jsx**: Các hằng số màu sắc cho việc tạo kiểu.
+- **messages.jsx**: Các thông điệp và văn bản hướng đến người dùng.
+- **routes.jsx**: Các đường dẫn và các hằng số liên quan.
+
+### 📂 hooks
+
+Các hook React tùy chỉnh để quản lý trạng thái và các side effect.
+
+- **.gitkeep**: Đảm bảo thư mục được bao gồm trong kiểm soát phiên bản.
+
+### 📂 modules
+
+Các module dựa trên tính năng, mỗi module chứa các thành phần, hook, trạng thái và tiện ích của riêng nó.
+
+- **auth/**: Module xác thực.
+  - **components/**: Các thành phần liên quan đến xác thực.
+  - **hooks/**: Các hook tùy chỉnh cho logic xác thực.
+  - **states/**: Quản lý trạng thái cho xác thực.
+    - **actions/**: Các hành động cho Redux hoặc các công cụ quản lý trạng thái khác.
+    - **reducers/**: Các bộ giảm tốc cho trạng thái xác thực.
+    - **store/**: Cấu hình store cho trạng thái xác thực.
+  - **utils/**: Các hàm tiện ích cụ thể cho xác thực.
+- **core/**: Các chức năng cốt lõi được chia sẻ giữa các module.
+  - **components/**: Các thành phần cốt lõi được chia sẻ.
+  - **design-system/**: Các thành phần và kiểu thiết kế hệ thống.
+  - **hooks/**: Các hook tùy chỉnh cho chức năng cốt lõi.
+  - **utils/**: Các hàm tiện ích cho chức năng cốt lõi.
+
+### 📂 pages
+
+Chứa các thành phần cấp trang, mỗi trang đại diện cho một trang đầy đủ trong ứng dụng.
+
+- **.gitkeep**: Đảm bảo thư mục được bao gồm trong kiểm soát phiên bản.
+
+### 📂 routes
+
+Cấu hình và thành phần định tuyến.
+
+- **AppRouter.jsx**: Thành phần định tuyến chính.
+- **index.js**: Điểm nhập cho cấu hình định tuyến.
+
+### 📂 styles
+
+Các kiểu toàn cục và các tệp liên quan đến kiểu dáng.
+
+- **.gitkeep**: Đảm bảo thư mục được bao gồm trong kiểm soát phiên bản.
+
+### 📂 tests
+
+Các tệp kiểm thử và tiện ích kiểm thử.
+
+- **.gitkeep**: Đảm bảo thư mục được bao gồm trong kiểm soát phiên bản.
+
+### 📂 utils
+
+Các hàm tiện ích và trình trợ giúp được sử dụng trong toàn bộ ứng dụng.
+
+- **.gitkeep**: Đảm bảo thư mục được bao gồm trong kiểm soát phiên bản.
+
+### Các Tệp Gốc
+
+- **App.css**: Các kiểu CSS toàn cục cho ứng dụng.
+- **App.jsx**: Thành phần gốc của ứng dụng.
+- **index.css**: Các kiểu CSS cơ bản.
+- **main.jsx**: Điểm nhập cho ứng dụng React, kết xuất thành phần gốc.
+
+## Ghi Chú Bổ Sung
+
+- Các tệp **.gitkeep** được sử dụng để bao gồm các thư mục trống trong kiểm soát phiên bản.
+- Các tệp **Readme.md** trong các thư mục cung cấp tài liệu và hướng dẫn cụ thể liên quan đến thư mục đó.
+
+Cấu trúc này giúp duy trì một mã nguồn sạch sẽ, có tổ chức và dễ mở rộng cho ứng dụng React của bạn. Mỗi module và thành phần là tự chứa, giúp dễ dàng quản lý và phát triển các tính năng mới.
