@@ -4,5 +4,5 @@ export const AccessDeniedPage = () => {
       <h2>403 - Access Denied</h2>
       <p>Sorry, you do not have permission to access this page.</p>
     </div>
-  )
-}
+  );
+};

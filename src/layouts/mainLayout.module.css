@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.child {
+  flex-grow: 1;
+}
